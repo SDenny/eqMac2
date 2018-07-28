@@ -91,7 +91,7 @@ NSRunningApplication *focusedApplication;
                     if (![Devices eqMacDriverInstalled]) {
                         [Utilities runAppleScriptWithName:@"open_security_settings"];
                         switch([Utilities showAlertWithTitle:@"Problem installing the Driver"
-                                                  andMessage:@"Most likely your Security settings don't allow non-Appstore apps to be installed with drivers.\nWe have openned your System Preferences.\nDown where it says \"Allow apps downloaded from:\"\nTry to switch to \"App Store and identified developers\"\nAnd then try to install the driver again..."
+                                                  andMessage:@"Most likely your Security settings don't allow non-Appstore apps to be installed with drivers.\nWe have opened your System Preferences.\nDown where it says \"Allow apps downloaded from:\"\nTry to switch to \"App Store and identified developers\"\nAnd then try to install the driver again..."
                                                   andButtons:@[@"I changed my settings, try to install again..."]]){
                             case NSAlertFirstButtonReturn: {
                                 if([Utilities runShellScriptWithName:@"install_driver"]){
